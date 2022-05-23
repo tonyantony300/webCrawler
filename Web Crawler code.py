@@ -31,9 +31,9 @@ class Crawler(object):
         self.root = root
         self.host = urlparse.urlparse(root)[1]
         ## Data for filters:
-        self.depth_limit = depth_limit # Max depth (number of hops from root)
-        self.locked = locked           # Limit search to a single host?
-        self.confine_prefix=confine    # Limit search to this prefix
+        self.depth_limit = depth_limit 
+        self.locked = locked           
+        self.confine_prefix=confine    
         self.exclude_prefixes=exclude; # URL prefixes NOT to visit
         self.urls_seen = set()          # Used to avoid putting duplicates in queue
         self.urls_remembered = set()    # For reporting to user
